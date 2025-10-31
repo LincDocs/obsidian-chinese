@@ -78,6 +78,7 @@ jobs:
             GIT_LINK=$(head -n 1 temp_repo/agency)
             rm -rf temp_repo
             git clone --depth 1 $GIT_LINK temp_repo
+            rm -rf temp_repo/.git
             echo "with agency"
           else
             echo "without agency"
@@ -178,5 +179,6 @@ jobs:
           branch: gh-pages
 
           folder: src/.vuepress/dist
+
 
 
