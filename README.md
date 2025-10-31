@@ -4,5 +4,5 @@
 
 由于爆内存了不得不分开两部分构建:
 
-- https://lincdocs.github.io/obsidian-chinese-help/
-- https://lincdocs.github.io/obsidian-chinese-help/01%202021新教程/
+- https://lincdocs.github.io/obsidian-chinese/
+- https://lincdocs.github.io/obsidian-chinese/01%202021新教程/
