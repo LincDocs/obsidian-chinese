@@ -68,7 +68,8 @@ jobs:
           
           # 文档的克隆、构建、部署。注意 `clone --depth 1` 只拉最近一次提交，减少时间
           # git clone --depth 1 https://github.com/${GITHUB_REPOSITORY}.git # 如果有多个clone项则替换成这个，避免冲突
-          git clone --depth 1 https://github.com/${GITHUB_REPOSITORY}.git temp_repo 
+          git clone --depth 1 https://github.com/${GITHUB_REPOSITORY}.git temp_repo
+          rm -rf .git # --depth 1 的话必须要删除 .git，避免时间和贡献者错乱
 
           # 该仓库为代理仓库，使用链接仓库而非此仓库
           # TODO 支持agency多个仓库。如果想更通用，干脆支持直接运行agency里的命令组
@@ -176,3 +177,4 @@ jobs:
           branch: gh-pages
 
           folder: src/.vuepress/dist
+
